@@ -1,0 +1,27 @@
+/* src/styles/theme.scss */
+
+/* 라이트 테마 */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #222222;
+  --color-primary: #42b883;
+}
+
+/* 다크 테마 */
+[data-theme="dark"] {
+  --color-bg: #121212;
+  --color-text: #eeeeee;
+  --color-primary: #3dd68c;
+}
+
+[data-theme="red"] {
+  --color-bg: red;
+}
+
+[data-theme="yellow"] {
+  --color-bg: yellow;
+}
+
+[data-theme="blue"] {
+  --color-bg: blue;
+}

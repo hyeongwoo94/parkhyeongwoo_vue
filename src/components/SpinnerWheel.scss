@@ -1,0 +1,61 @@
+@use '@/assets/scss/common' as var;
+// 달력 스피너
+.spinner_box{
+    position: relative;
+    width: 100%;
+    &_date_picker{
+        display: flex;
+        align-items: center;
+    }
+}
+.spinner_select_box{
+    width: 100%;
+    height: 35px;
+    border-radius: 7.602px;
+    background: rgba(0, 0, 0, 0.04);
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+    justify-content: center;
+}
+.spinner{
+    &_container {
+        width: 100%;
+    }
+    &_wheel {
+        max-height: 245px;   
+        scroll-snap-type: y mandatory;
+        border-radius: 8px;
+        -ms-overflow-style: none;  /* IE, Edge */
+        scrollbar-width: none;     /* Firefox */
+        overflow: auto;
+    }
+    &_item {
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        scroll-snap-align: center;
+        cursor: pointer;
+        color: var(--black2);
+        opacity: 0.35;
+        @include var.font(18px,400, 35px);
+        transition: all 0.2s;
+        box-sizing: border-box;
+        &.selected{
+            color: var(--black2);
+            @include var.font(23px,400,35px);
+            opacity: 1;
+             transition: all 0.2s;
+        }
+        &.null{
+            opacity: 0;
+        }
+    }
+}
+
+
+// 달력 스피너//

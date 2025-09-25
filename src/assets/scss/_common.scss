@@ -1,0 +1,11 @@
+body{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+
+@mixin font($size, $weight, $lineHeight:1) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
